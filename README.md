@@ -19,6 +19,9 @@ The scraper consists of three main components:
 ## Installation
 
 1. Clone this repository
+ ```bash
+   git clone https://github.com/myenne1/odoo-sku-image-updater.git
+   ```
 2. Install required dependencies:
    ```bash
    pip install -r requirements.txt
@@ -51,17 +54,17 @@ ODOO_API_KEY=your_odoo_api_key
 
 #### Database Name
 - Log into your Odoo instance
-- Look at the URL: `https://your-instance.odoo.com/web#...`
+- Look at the URL: `https://your-db-name.odoo.com/web#...`
 - The database name is typically the subdomain before `.odoo.com`
 - Or check the URL parameters for `db=database_name`
 
 #### API Key
-1. Log into Odoo as an administrator
-2. Go to Settings → Users & Companies → Users
-3. Select your user account
+1. Log into Odoo
+2. Click on your profile picture in the top right corner and select "My Profile"
+3. Navigate to "Account Security"
 4. Scroll down to "API Keys" section
 5. Click "New API Key"
-6. Give it a name (e.g., "Scraper Integration")
+6. Give it a description
 7. Copy the generated API key
 
 #### Odoo URL

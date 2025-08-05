@@ -7,3 +7,4 @@ downloaded-images
 no_images.txt
 configurations/__pycache__
 configurations/.DS_Store
+meta.csv
