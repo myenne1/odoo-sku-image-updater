@@ -1,0 +1,23 @@
+ # Python cache files
+  __pycache__/
+  *.py[cod]
+  *.pyo
+
+  # Downloaded/scraped content
+  downloaded-images/
+  data/
+  output/
+  *.csv
+  *.json
+
+  # Environment files
+  .env
+  .env.local
+
+  # IDE files
+  .vscode/
+  .idea/
+  *.swp
+
+  # OS files
+  .DS_Store
