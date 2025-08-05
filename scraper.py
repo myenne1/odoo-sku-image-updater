@@ -3,6 +3,9 @@ import time
 import base64
 import hashlib
 from playwright.sync_api import Browser
+from configurations.config import settings
+
+PAGE_LIMIT = settings.PAGE_LIMIT
 
 class Scraper:
     def __init__(self, page, output_dir: str = "downloaded-images", blank_images: list = []):
@@ -12,7 +15,7 @@ class Scraper:
         self.image_data = []
         self.blank_images = []
         self.seen_hashes = set()
-        self.image_hash_map = {}  # hash -> filename
+        self.image_hash_map = {} 
 
         os.makedirs(self.output_dir, exist_ok=True)
         print(f"[+] Images will be saved to: {self.output_dir}")
@@ -58,7 +61,7 @@ class Scraper:
                 current_page += 1
                 time.sleep(8)
 
-            if current_page == 100:
+            if current_page == PAGE_LIMIT:
                 break
 
     def navigate_to_sku_page(self, sku_element, item_name, sku_num):

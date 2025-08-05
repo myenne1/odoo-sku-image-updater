@@ -8,6 +8,7 @@ class Settings(BaseSettings):
     ODOO_DB: str
     ODOO_USERNAME: str
     ODOO_API_KEY: str
+    PAGE_LIMIT: int
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"

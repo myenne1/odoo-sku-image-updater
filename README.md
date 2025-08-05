@@ -48,6 +48,9 @@ ODOO_URL=https://your-odoo-instance.com
 ODOO_DB=your_database_name
 ODOO_USERNAME=your_odoo_username
 ODOO_API_KEY=your_odoo_api_key
+
+# Scraper Configuration
+PAGE_LIMIT=100
 ```
 
 ### Finding Your Odoo Credentials
