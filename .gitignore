@@ -1,23 +1,9 @@
- # Python cache files
-  __pycache__/
-  *.py[cod]
-  *.pyo
-
-  # Downloaded/scraped content
-  downloaded-images/
-  data/
-  output/
-  *.csv
-  *.json
-
-  # Environment files
-  .env
-  .env.local
-
-  # IDE files
-  .vscode/
-  .idea/
-  *.swp
-
-  # OS files
-  .DS_Store
+__pycache__
+.DS_Store
+.env
+.vscode
+.claude
+downloaded-images
+no_images.txt
+configurations/__pycache__
+configurations/.DS_Store
