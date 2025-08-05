@@ -6,4 +6,4 @@ if __name__ == "__main__":
     navigator.run(headless=False)
     scraper = Scraper(navigator.page)
     scraper.run()
-    input("Press ENTER to close browser")
+    input("Press ENTER to close browser") # comment
