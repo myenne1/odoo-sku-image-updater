@@ -48,7 +48,7 @@ class Scraper:
                         print("[!] Missing SKU or item name, skipping row.")
                         continue
 
-                    print(f"\nProcessing SKU: {sku_num}")
+                    print(f"\n[{row}/{len(rows)}] Processing SKU: {sku_num}")
                     self.navigate_to_sku_page(sku_element, item_name, sku_num)
 
                 except Exception as e:

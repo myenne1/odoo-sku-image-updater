@@ -48,6 +48,7 @@ def update_image(sku, img_path):
         if not product_ids:
             msg = f"SKU '{sku}' not found in Odoo."
             failure_log.append((sku, img_path, msg))
+            print(f"[!] {msg}")
             return
 
         product_id = product_ids[0]
@@ -55,16 +56,19 @@ def update_image(sku, img_path):
         if not os.path.isfile(img_path):
             msg = f"Image not found: {img_path}"
             failure_log.append((sku, img_path, msg))
+            print(f"[!] {msg}")
             return
 
         if not img_path.lower().endswith(('.jpg', '.jpeg', '.png')):
             msg = f"Unsupported format: {img_path}"
             failure_log.append((sku, img_path, msg))
+            print(f"[!] {msg}")
             return
 
         if os.path.getsize(img_path) > 2 * 1024 * 1024:
             msg = f"Image too large (>2MB): {img_path}"
             failure_log.append((sku, img_path, msg))
+            print(f"[!] {msg}")
             return
 
         with open(img_path, 'rb') as f:
@@ -133,7 +137,7 @@ def main():
 
 
 def generate_report(report_path="upload_report.txt"):
-    with open(report_path, "w") as f:
+    with open(report_path, "a") as f:
         f.write("UPLOAD REPORT\n")
         f.write("=" * 60 + "\n\n")
 

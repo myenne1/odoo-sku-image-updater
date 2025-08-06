@@ -7,4 +7,8 @@ downloaded-images
 no_images.txt
 configurations/__pycache__
 configurations/.DS_Store
-meta.csv
+*.csv
+upload_report.txt
+sku_item_names.txt
+last_checkpoint.txt
+
